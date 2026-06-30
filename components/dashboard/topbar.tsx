@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input'
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
@@ -59,7 +60,9 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
             }
           />
           <DropdownMenuContent align="end" className="w-80">
+            <DropdownMenuGroup>
             <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+            </DropdownMenuGroup>
             <DropdownMenuSeparator />
             {alerts.map((a) => (
               <DropdownMenuItem key={a.id} className="flex-col items-start gap-1 py-2.5">
@@ -98,7 +101,9 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
             }
           />
           <DropdownMenuContent align="end" className="w-52">
+            <DropdownMenuGroup>
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>Profile</DropdownMenuItem>
             <DropdownMenuItem>Preferences</DropdownMenuItem>
